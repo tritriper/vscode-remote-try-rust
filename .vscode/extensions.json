@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "eamodio.gitlens",
+        "rust-lang.rust",
+        "mhutchie.git-graph",
+        "Gruntfuggly.todo-tree"
+    ]
+}
