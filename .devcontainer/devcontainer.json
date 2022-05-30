@@ -32,7 +32,11 @@
 				"mutantdino.resourcemonitor",
 				"matklad.rust-analyzer",
 				"tamasfe.even-better-toml",
-				"serayuzgur.crates"
+				"serayuzgur.crates",
+				"rust-lang.rust",
+				"eamodio.gitlens",
+				"mhutchie.git-graph",
+				"Gruntfuggly.todo-tree"
 			]
 		}
 	},
