@@ -5,23 +5,19 @@
  
  extern crate ferris_says;
 
- use ferris_says::say; 
- use std::io::{stdout, BufWriter};
+ use std::process::Command;
 
 fn main() {
 
-    return test_ferris();
+    let output = Command::new("test/imported_exe/hello_world_V2.0")
+                    //  .arg("")
+                     .output()
+                     .expect("Failed to execute command");
     
-}
-
-/**
- * Display the hello work from ferris_says crate
- */
-fn test_ferris() {
-    let stdout = stdout();
-    let message = String::from("Hello fellow Rustaceans!");
-    let width = message.chars().count();
-
-    let mut writer = BufWriter::new(stdout.lock());
-    say(message.as_bytes(), width, &mut writer).unwrap();
+    println!("status: {}", output.status);
+    println!("stdout: {}", String::from_utf8_lossy(&output.stdout));
+    println!("stderr: {}", String::from_utf8_lossy(&output.stderr));
+    
+    assert!(output.status.success());
+    
 }
