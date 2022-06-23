@@ -9,7 +9,7 @@
 
 fn main() {
 
-    let output = Command::new("test/imported_exe/hello_world_V2.0")
+    let output = Command::new("test/imported_exe/print_through_2_thread")
                     //  .arg("")
                      .output()
                      .expect("Failed to execute command");
